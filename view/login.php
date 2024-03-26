@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . "/../view/navbar.php"; 
+
+
+?>
 <!-- Button to open the modal login form -->
 <button onclick="document.getElementById('id01').style.display='block'">Login</button>
 
@@ -31,3 +36,5 @@ class="close" title="Close Modal">&times;</span>
     </div>
   </form>
 </div>
+
+<?php require_once __DIR__ . "/../view/footer.php";  ?>

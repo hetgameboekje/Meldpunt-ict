@@ -1,2 +1,1 @@
-<p>footer
-</p>
+<footer> footer is cool</footer>
