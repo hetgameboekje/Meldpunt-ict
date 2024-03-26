@@ -1,4 +1,75 @@
-<FilesMatch "^(?!index\.php).*$">
-    Order Deny,Allow
+# Prevent searching folders
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^/controllers/
+    RewriteRule ^ - [L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^/views/
+    RewriteRule ^ - [L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^/models/
+    RewriteRule ^ - [L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^/includes/
+    RewriteRule ^ - [L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^/furniture/
+    RewriteRule ^ - [L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^/images/
+    RewriteRule ^ - [L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^/languages/
+    RewriteRule ^ - [L]
+</IfModule>
+
+# Prevent open files with this extention
+<FilesMatch "\.inc\.php$">
+    Order deny,allow
     Deny from all
 </FilesMatch>
+
+<FilesMatch "\.controller\.php$">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.model\.php$">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.view\.php$">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+
+
+# ReWrite to index and create a $_GET named request
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.gif|\.jpeg|\.bmp|\.css|\.js)$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?request=$1 [L,QSA]
+</IfModule>
