@@ -1,4 +1,17 @@
 <?php
+// author name program - calls and call by
+// ****************************************
+// * timo - meta information
+// * customer = opensource use
+// * license = CCTL license
+// * Default route 
+// * calls model 
+// * call by client
+// *
+// *
+// *
+// ****************************************
+
 
 // Define your controllers directory
 $controllersDir = __DIR__ . '/controllers/';
