@@ -1,0 +1,25 @@
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.navbarBtn {
+    /* Button text style */
+    font-size: 30px;
+
+    color: white;
+
+    /* Button style */
+    width: 220px;
+    height: 80px;
+
+    border: 5px solid;
+    border-radius: 20px;
+
+    background-color: #00555C;
+} .navbarBtn:hover {
+    /* Button style */
+    background-color: #004349;
+} 
