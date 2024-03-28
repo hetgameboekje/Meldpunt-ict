@@ -2,7 +2,18 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
 
+#navbarBorder {
+    width: 110%;
+    height: 30px;
+    background-color: #E56A54;
+
+    border: 0px;
+
+    position: absolute;
+    left: 0px;
+    top: 12.7%;
 }
 
 .navbarBtn {
@@ -23,3 +34,51 @@
     /* Button style */
     background-color: #004349;
 } 
+
+/* Atributes */
+
+.atributes {
+    float: right;
+    position: absolute;   
+}
+
+#atribute1 {
+    width: 750px;
+    height: 100px;
+    background-color: #00555C;
+
+    rotate: -45deg;
+    right: 61%;
+}
+
+#atribute2 {
+    width: 750px;
+    height: 100px;
+    background-color: #E56A54;
+
+    rotate: -45deg;
+    right: 72.5%;
+}
+
+#atribute3 {
+    width: 20%;
+    height: 100px;
+    background-color: #00555C;
+
+    top: 0px;
+    left: 0px;
+}
+
+#leenVanPuntLogo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+
+    color: white;
+
+    margin: 5px;
+}
+
+#vistaLogo {
+    width: 200px;
+    margin-left: 5px;
+}

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="public/css/navbarStyle.css">
-  
+
 <navbar id="navbar">
   <table>
     <tr>
@@ -26,3 +26,15 @@
     </tr>
   </table>
 </navbar>
+
+<hr id="navbarBorder">
+
+<div>
+  <div class="atributes" id="atribute1"></div>
+  <div class="atributes" id="atribute2"></div>
+  <div class="atributes" id="atribute3">
+    <h1 id="leenVanPuntLogo" >Leen van punt</h1>
+    <img id="vistaLogo" src="public\img\VISTA_Logo_Liggend_koraal_zonder_college_RGB.png">
+  </div>
+</div>
+
