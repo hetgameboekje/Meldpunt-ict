@@ -1,8 +1,4 @@
-<?php
-require_once __DIR__ . "/../view/navbar.php"; 
-
-
-?>
+<?php require_once __DIR__ . "/../view/navbar.php"; ?>
 <!-- Button to open the modal login form -->
 <button onclick="document.getElementById('id01').style.display='block'">Login</button>
 
