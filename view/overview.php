@@ -26,21 +26,7 @@
             <tbody>
                 <?php
 
-                    $sql = "SELECT * FROM transactions";
-                    $result = $conn->query($sql);
-
-                    if(!$result){
-                        die("invalid query: " . $conn->error);
-                    }
-
-                    while($row = $result->fetch_assoc()){
-                        echo"<tr>
-                            <td>" . $row[""] . "</td>
-                            <td>" . $row[""] . "</td>
-                            <td>" . $row[""] . "</td>
-                            <td>" . $row[""] . "</td>
-                        </tr>";
-                    }
+                    require_once __DIR__ . "/../model/overview.php";
                 ?>
             </tbody>
         </table>
