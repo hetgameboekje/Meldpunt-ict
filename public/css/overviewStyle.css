@@ -5,3 +5,31 @@
 
     min-height: 100vh;
 }
+
+#overviewTable {
+    font-size: xx-large;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+thead {
+    background-color: #00555C;
+    font-weight: bolder;
+}
+
+.tableHead {
+    width: 250px;
+    height: 75px;
+
+    border: 2px black solid;
+}
+
+.tableBody {
+    background-color: #E56A54;
+    text-align: center;
+
+    height: 60px;
+}
