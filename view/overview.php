@@ -16,13 +16,13 @@
 <body>
     <div id="main">
 
-        <table>
-            <tr>                
-                <th>Studenten NR</th>
-                <th>Voor-/Achternaam</th>
-                <th>Producten</th>
-                <th>Datum</th>
-            </tr>
+        <table id="overviewTable">
+            <thead>                
+                <th class="tableHead">Studenten NR</th>
+                <th class="tableHead">Voor-/Achternaam</th>
+                <th class="tableHead">Producten</th>
+                <th class="tableHead">Datum</th>
+            </thead>
             <tbody>
                 <?php
 

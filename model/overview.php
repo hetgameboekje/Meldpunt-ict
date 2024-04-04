@@ -1,19 +1,21 @@
 <?php
 // query's kunnen nog vernderen dit is even om het te testen
 
-                    $sql = "SELECT * FROM overview_test";
-                    $result = $conn->query($sql);
+    require_once __DIR__ . "/../model/db.php";
 
-                    if(!$result){
-                        die("invalid query: " . $conn->error); 
-                    }
+    $sql = "SELECT * FROM overview_test";
+    $result = $mysqli->query($sql);
 
-                    while($row = $result->fetch_assoc()){
-                        echo"<tr>
-                            <td>" . $row["Student_NR"] . "</td>
-                            <td>" . $row["Student_Naam"] . "</td>
-                            <td>" . $row["Aantal_Items"] . "</td>
-                            <td>" . $row["Datum"] . "</td>
-                        </tr>";
-                    }
+    if(!$result){
+        die("invalid query: " . $mysqli->error); 
+    }
+
+    while($row = $result->fetch_assoc()){
+        echo"<tr>
+            <td class='tableBody'>" . $row["Student_NR"] . "</td>
+            <td class='tableBody'>" . $row["Student_Naam"] . "</td>
+            <td class='tableBody'>" . $row["Aantal_Items"] . "</td>
+            <td class='tableBody'>" . $row["Datum"] . "</td>
+        </tr>";
+        }
 ?>
