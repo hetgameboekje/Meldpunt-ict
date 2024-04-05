@@ -5,7 +5,7 @@
 }
 
 #navbarBorder {
-    width: 110%;
+    width: 100%;
     height: 30px;
     background-color: #E56A54;
 
@@ -62,7 +62,7 @@
 
 #atribute3 {
     width: 20%;
-    height: 100px;
+    height: 101px;
     background-color: #00555C;
 
     top: 0px;
