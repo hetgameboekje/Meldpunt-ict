@@ -1,17 +1,30 @@
 <?php
-// Database configuration
-$servername = "localhost";
-$username = "";
-$password = "";
-$database = "LeenVanPunt";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+class database {
+    private function connection() {
+        $host = "localhost";
+        $dbname = "LeenVanPunt";
+        $username = "";
+        $password = ""; // change me
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+        $conn = new mysqli($host, $username, $password, $dbname);
+
+        if ($conn->connect_errno) {
+            die("Connection error: " . $conn->connect_error);
+        }
+
+        return $conn;
+    }
+
+    public function query($sql) {
+        $conn = $this->connection(); // Accessing private method connection
+        $result = $conn->query($sql);
+        return $result;
+    }
 }
 
-echo "Connected successfully";
+$test = new database();
+$test->query($sql);
+
+
 ?>
